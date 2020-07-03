@@ -1,0 +1,23 @@
+<!-- index.html = view -->
+<!-- view can see what's in scope -->
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+</head>
+
+<body ng-app="ToDoList"> <!-- Everything in body will be part of ToDoList application -->
+    <div ng-controller="MainController">
+        <div ng-repeat="item in list"> <!-- directives make code modular/ dynamic -->
+            <li> {{ item }} </li>
+        </div>
+        <input ng-model="addToDo">  <!-- ng-model binds the input to a variable -->
+        <button ng-click="addItem()">Submit</button>
+    </div>
+
+    <!-- Modules -->
+    <script src="js/app.js"></script> <!-- import app -->
+    <!-- Controllers -->
+    <script src="js/controllers/MainController.js"></script>
+</body>
+</html>
